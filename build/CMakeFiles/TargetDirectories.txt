@@ -1,4 +1,0 @@
-/home/robot-seu/cpp_project/my_webserver/build/CMakeFiles/rebuild_cache.dir
-/home/robot-seu/cpp_project/my_webserver/build/CMakeFiles/edit_cache.dir
-/home/robot-seu/cpp_project/my_webserver/build/WebServer/CMakeFiles/rebuild_cache.dir
-/home/robot-seu/cpp_project/my_webserver/build/WebServer/CMakeFiles/edit_cache.dir
