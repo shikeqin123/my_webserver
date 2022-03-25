@@ -7,5 +7,5 @@ protected:
     ~nocopyable(){};
 private:
     nocopyable(const nocopyable &);
-    const nocopyable& operator =(const nocopyable &)；
-}
+    const nocopyable& operator =(const nocopyable &);
+};
