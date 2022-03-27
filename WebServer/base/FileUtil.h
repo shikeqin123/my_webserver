@@ -6,7 +6,7 @@
 class AppendFile: nocopyable{
 public:
     explicit AppendFile(std::string filename);
-    ~AppendFile();
+    ~AppendFile(){ fclose(fp_);};
     void append(const char *logline,const size_t len);
     void flush();
 private:
