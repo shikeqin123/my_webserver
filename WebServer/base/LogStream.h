@@ -8,7 +8,7 @@ const int kSmallBuffer=4000;
 const int kLargeBuffer=4000*1000;
 
 template<int SIZE>
-class FixedBuffer:nocopeable{
+class FixedBuffer:nocopyable{
 public:
     FixedBuffer():cur_(data_){}
     ~FixedBuffer(){}
