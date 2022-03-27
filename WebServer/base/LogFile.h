@@ -13,7 +13,7 @@ public:
 
     void append(const char *logline, int len);
     void flush();
-    bool rollFile();
+    //bool rollFile();
 
 private:
     void append_unlocked(const char* logline, int len);
