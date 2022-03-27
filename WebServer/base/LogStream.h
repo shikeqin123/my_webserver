@@ -26,11 +26,11 @@ public:
     void add(size_t len){cur_+=len;}
 
     void reset(){ cur_=data_;}
-    void bzero(){ memset(data_,0,sizeof(data_);}
+    void bzero(){ memset(data_,0,sizeof(data_));}
 
 
 private:
-    inline const char* end() const { return data_+sizeof(data_)}
+    inline const char* end() const { return data_+sizeof(data_);}
     
     char data_[SIZE];
     char* cur_;

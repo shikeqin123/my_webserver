@@ -5,9 +5,10 @@
 #include"MutexLock.h"
 #include"nocopyable.h"
 
+
 class Condition{
 public:
-    Condition(MutexLock &mutexLock):mutexLock_(mutexLock){
+    Condition(MutexLock& mutexLock):mutexLock_(mutexLock){
         pthread_cond_init(&cond,NULL);
     }
     ~Condition(){

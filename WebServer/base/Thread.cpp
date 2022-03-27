@@ -35,10 +35,19 @@ void* startThread(void* obj){
     return NULL;
 }
 
+void Thread::setDefaultName(){
+    if(name_.empty()) {
+    char buf[32];
+    snprintf(buf, sizeof buf, "Thread");
+    name_ = buf;
+  }
+}
+
 Thread::Thread(const ThreadFunc& func, const std::string& n)
     :started_(false), joined_(false),pthreadId_(0),tid_(0),func_(func),name_(n),latch_(1){
         setDefaultName();
 }
+
 
 Thread::~Thread(){
     if(started_&&!joined_) pthread_detach(pthreadId_); 
