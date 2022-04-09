@@ -11,8 +11,8 @@ public:
     ~Logger();
     LogStream &stream(){ return impl_.stream_;}
 
-    static void setLogFileName(std::string fileName) { logFileName_ = fileName; }
-    static std::string getLogFileName() { return logFileName_; }
+    static void setLogFileName(std::string fileName) { logFileName_ = fileName;}
+    static std::string getLogFileName() { return logFileName_;}
 private:
     class Impl{
         public:

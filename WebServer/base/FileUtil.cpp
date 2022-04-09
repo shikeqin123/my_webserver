@@ -2,6 +2,7 @@
 
 AppendFile::AppendFile(std::string filename):fp_(fopen(filename.c_str(),"ae")){
     setbuffer(fp_,buffer_,sizeof(buffer_));
+    printf("open log file!\n");
 }
 
 void AppendFile::append(const char *logline, const size_t len){

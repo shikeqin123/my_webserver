@@ -45,6 +45,7 @@ void AsyncLogging::threadFunc(){
     assert(running_==true);
     latch_.countDown();
     LogFile output(basename_);
+    printf("start log thread\n");
     BufferPtr newBuffer1(new Buffer());
     BufferPtr newBuffer2(new Buffer());
     newBuffer1->bzero();

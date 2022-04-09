@@ -15,6 +15,7 @@ std::string Logger::logFileName_="./WebServer.log";
 
 void once_init(){
     AsyncLogger_=new AsyncLogging(Logger::getLogFileName());
+    AsyncLogger_->start(); 
 }
 
 void output(const char* msg, int len){
@@ -25,6 +26,7 @@ void output(const char* msg, int len){
 Logger::Impl::Impl(const char* fileName, int line)
     :stream_(), line_(line),basename_(fileName){
         formatTime();
+        stream_<<"--"<<basename_<<':'<<line_<<'\n';
 }
 
 void Logger::Impl::formatTime(){
@@ -42,7 +44,7 @@ Logger::Logger(const char* fileName, int line)
     :impl_(fileName,line){}
 
 Logger::~Logger(){
-    impl_.stream_<<"--"<<impl_.basename_<<':'<<impl_.line_<<'\n';
+    impl_.stream_<<'\n';
     const LogStream::Buffer& buf(stream().buffer());
     output(buf.data(),buf.length());
 
